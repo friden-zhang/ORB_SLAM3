@@ -57,7 +57,7 @@ We have tested the library in **Ubuntu 16.04** and **18.04**, but it should be e
 We use the new thread and chrono functionalities of C++11.
 
 ## Pangolin
-We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
+We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. This repository pins Pangolin **v0.6** as the git submodule `Thirdparty/Pangolin`; `build.sh` installs it locally under `Thirdparty/Pangolin-install` and configures ORB-SLAM3 against that copy.
 
 ## OpenCV
 We use [OpenCV](http://opencv.org) to manipulate images and features. Dowload and install instructions can be found at: http://opencv.org. **Required at leat 3.0. Tested with OpenCV 3.2.0 and 4.4.0**.
@@ -83,17 +83,35 @@ We provide some examples to process input of a monocular, monocular-inertial, st
 
 Clone the repository:
 ```
-git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3
+git clone --recursive <repo-url> ORB_SLAM3
 ```
 
 We provide a script `build.sh` to build the *Thirdparty* libraries and *ORB-SLAM3*. Please make sure you have installed all required dependencies (see section 2). Execute:
 ```
 cd ORB_SLAM3
+git submodule update --init --recursive Thirdparty/Pangolin
 chmod +x build.sh
 ./build.sh
 ```
 
 This will create **libORB_SLAM3.so**  at *lib* folder and the executables in *Examples* folder.
+
+## Ubuntu 22.04 EuRoC / TUM-VI reproduction note
+
+This checkout has been validated on Ubuntu 22.04 with:
+
+* EuRoC `MH_01_easy`
+* TUM-VI `dataset-room1_512_16`
+* monocular and monocular-inertial examples
+
+The local dataset layout used for validation is:
+
+```
+Datasets/EuRoC/MH_01_easy
+Datasets/TUM-VI/dataset-room1_512_16
+```
+
+`Datasets/`, the local Pangolin build/install directories, extracted vocabulary, and generated trajectories are ignored by git. Detailed commands and the validation summary are recorded in [docs/Ubuntu22_EuRoC_TUMVI.md](docs/Ubuntu22_EuRoC_TUMVI.md).
 
 # 4. Running ORB-SLAM3 with your camera
 

@@ -35,7 +35,7 @@ This is a modified version of [Sophus](https://github.com/strasdat/Sophus). [MIT
 #####Library dependencies 
 
 * **Pangolin (visualization and user interface)**.
-[MIT license](https://en.wikipedia.org/wiki/MIT_License).
+[MIT license](https://en.wikipedia.org/wiki/MIT_License). This repository vendors Pangolin as a git submodule at `Thirdparty/Pangolin` and pins it to v0.6 for the Ubuntu 22.04 reproduction setup.
 
 * **OpenCV**.
 BSD license.
