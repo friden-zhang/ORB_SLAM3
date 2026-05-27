@@ -21,15 +21,15 @@ The original code is BSD licensed.
 The code is from: http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel.
 The code is in the public domain.
 
-#####Code in Thirdparty folder
+#####Bundled code in Components folder
 
-* All code in **DBoW2** folder.
+* All code in **Components/DBoW2** folder.
 This is a modified version of [DBoW2](https://github.com/dorian3d/DBoW2) and [DLib](https://github.com/dorian3d/DLib) library. All files included are BSD licensed.
 
-* All code in **g2o** folder.
+* All code in **Components/g2o** folder.
 This is a modified version of [g2o](https://github.com/RainerKuemmerle/g2o). All files included are BSD licensed.
 
-* All code in **Sophus** folder.
+* All code in **Components/Sophus** folder.
 This is a modified version of [Sophus](https://github.com/strasdat/Sophus). [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 #####Library dependencies 
@@ -45,7 +45,6 @@ For versions greater than 3.1.1 is MPL2, earlier versions are LGPLv3.
 
 * **ROS (Optional, only if you build Examples/ROS)**.
 BSD license. In the manifest.xml the only declared package dependencies are roscpp, tf, sensor_msgs, image_transport, cv_bridge, which are all BSD licensed.
-
 
 
 

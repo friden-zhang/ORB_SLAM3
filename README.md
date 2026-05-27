@@ -65,8 +65,10 @@ We use [OpenCV](http://opencv.org) to manipulate images and features. Dowload an
 ## Eigen3
 Required by g2o (see below). Download and install instructions can be found at: http://eigen.tuxfamily.org. **Required at least 3.1.0**.
 
-## DBoW2 and g2o (Included in Thirdparty folder)
-We use modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) library to perform place recognition and [g2o](https://github.com/RainerKuemmerle/g2o) library to perform non-linear optimizations. Both modified libraries (which are BSD) are included in the *Thirdparty* folder.
+## Bundled SLAM components
+We use ORB-SLAM-specific versions of [DBoW2](https://github.com/dorian3d/DBoW2), [g2o](https://github.com/RainerKuemmerle/g2o), and [Sophus](https://github.com/strasdat/Sophus). These are kept under the *Components* folder because they are part of the maintained ORB-SLAM code snapshot and should not be replaced by upstream heads without compatibility work.
+
+External third-party dependencies that are meant to be fetched independently are kept under *Thirdparty* as git submodules.
 
 ## Python
 Required to calculate the alignment of the trajectory with the ground truth. **Required Numpy module**.
@@ -86,7 +88,7 @@ Clone the repository:
 git clone --recursive <repo-url> ORB_SLAM3
 ```
 
-We provide a script `build.sh` to build the *Thirdparty* libraries and *ORB-SLAM3*. Please make sure you have installed all required dependencies (see section 2). Execute:
+We provide a script `build.sh` to build the bundled *Components*, install required *Thirdparty* submodules, and build *ORB-SLAM3*. Please make sure you have installed all required dependencies (see section 2). Execute:
 ```
 cd ORB_SLAM3
 git submodule update --init --recursive Thirdparty/Pangolin

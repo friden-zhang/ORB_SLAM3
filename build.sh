@@ -6,17 +6,17 @@ NPROC="${NPROC:-$(nproc)}"
 
 cd "$ROOT_DIR"
 
-echo "Configuring and building Thirdparty/DBoW2 ..."
-cmake -S Thirdparty/DBoW2 -B Thirdparty/DBoW2/build -DCMAKE_BUILD_TYPE=Release
-cmake --build Thirdparty/DBoW2/build -j"$NPROC"
+echo "Configuring and building Components/DBoW2 ..."
+cmake -S Components/DBoW2 -B Components/DBoW2/build -DCMAKE_BUILD_TYPE=Release
+cmake --build Components/DBoW2/build -j"$NPROC"
 
-echo "Configuring and building Thirdparty/g2o ..."
-cmake -S Thirdparty/g2o -B Thirdparty/g2o/build -DCMAKE_BUILD_TYPE=Release
-cmake --build Thirdparty/g2o/build -j"$NPROC"
+echo "Configuring and building Components/g2o ..."
+cmake -S Components/g2o -B Components/g2o/build -DCMAKE_BUILD_TYPE=Release
+cmake --build Components/g2o/build -j"$NPROC"
 
-echo "Configuring and building Thirdparty/Sophus ..."
-cmake -S Thirdparty/Sophus -B Thirdparty/Sophus/build -DCMAKE_BUILD_TYPE=Release
-cmake --build Thirdparty/Sophus/build -j"$NPROC"
+echo "Configuring and building Components/Sophus ..."
+cmake -S Components/Sophus -B Components/Sophus/build -DCMAKE_BUILD_TYPE=Release
+cmake --build Components/Sophus/build -j"$NPROC"
 
 if [ ! -f Thirdparty/Pangolin/CMakeLists.txt ]; then
     echo "Pangolin submodule is missing. Run:"

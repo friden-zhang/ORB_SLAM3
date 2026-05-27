@@ -23,7 +23,7 @@
 
 #include<opencv2/core/core.hpp>
 
-#include "Thirdparty/DBoW2/DBoW2/FeatureVector.h"
+#include "Components/DBoW2/DBoW2/FeatureVector.h"
 
 #include<stdint-gcc.h>
 

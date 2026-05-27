@@ -59,11 +59,12 @@ KeyFrameTrajectory.txt
 CameraTrajectory.txt
 kf_*.txt
 f_*.txt
-Thirdparty/DBoW2/build/
-Thirdparty/DBoW2/lib/
-Thirdparty/g2o/build/
-Thirdparty/g2o/config.h
-Thirdparty/g2o/lib/
+Components/DBoW2/build/
+Components/DBoW2/lib/
+Components/g2o/build/
+Components/g2o/config.h
+Components/g2o/lib/
+Components/Sophus/build/
 Thirdparty/Pangolin-build/
 Thirdparty/Pangolin-install/
 Datasets/

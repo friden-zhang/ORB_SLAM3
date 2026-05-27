@@ -11,7 +11,7 @@ git submodule update --init --recursive Thirdparty/Pangolin
 git -C Thirdparty/Pangolin describe --tags --exact-match
 ```
 
-The expected tag is `v0.6`. The top-level build script builds DBoW2, g2o, Sophus, installs Pangolin locally to `Thirdparty/Pangolin-install`, extracts `Vocabulary/ORBvoc.txt`, and configures ORB-SLAM3 with that local Pangolin package:
+The expected tag is `v0.6`. The top-level build script builds the bundled `Components/DBoW2`, `Components/g2o`, and `Components/Sophus` code, installs Pangolin locally to `Thirdparty/Pangolin-install`, extracts `Vocabulary/ORBvoc.txt`, and configures ORB-SLAM3 with that local Pangolin package:
 
 ```bash
 ./build.sh
